@@ -32,7 +32,9 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '2.x'
-      - name: Test
+      - run: |
+          brew install basictex
+      - name: Install R packages
         run: |
           install.packages(c("bookdown", "arm"))
         shell: Rscript {0}
