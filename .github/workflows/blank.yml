@@ -33,7 +33,9 @@ jobs:
         with:
           python-version: '2.x'
       - run: |
-          brew install basictex mactex
+          brew install mactex
+          eval "$(/usr/libexec/path_helper)"
+
       - name: Install R packages
         run: |
           install.packages(c("bookdown", "arm"))
