@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: '2.x'
       - run: |
-          brew install basictex
+          brew install basictex mactex
       - name: Install R packages
         run: |
           install.packages(c("bookdown", "arm"))
